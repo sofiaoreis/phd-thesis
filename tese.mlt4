@@ -1,0 +1,9 @@
+{\reset@font\mltfont\mtc@string\contentsline{table}{\noexpand \leavevmode \numberline {4.1}{\ignorespaces Examples of security smells per weakness.\relax }}{\reset@font\mltfont 25}{table.caption.28}}
+{\reset@font\mltfont\mtc@string\contentsline{table}{\noexpand \leavevmode \numberline {4.2}{\ignorespaces Breakdown of warnings reported by \textsc {SLIC}{}.\relax }}{\reset@font\mltfont 27}{table.caption.29}}
+{\reset@font\mltfont\mtc@string\contentsline{table}{\noexpand \leavevmode \numberline {4.3}{\ignorespaces Performance of SLIC. (Validation with Students)\relax }}{\reset@font\mltfont 28}{table.caption.30}}
+{\reset@font\mltfont\mtc@string\contentsline{table}{\noexpand \leavevmode \numberline {4.4}{\ignorespaces Performance of \textsc {SLIC}. (Validation with Owners)\relax }}{\reset@font\mltfont 31}{table.caption.32}}
+{\reset@font\mltfont\mtc@string\contentsline{table}{\noexpand \leavevmode \numberline {4.5}{\ignorespaces \textsc {InfraSecure}{}'s list of string and AST patterns.\relax }}{\reset@font\mltfont 35}{table.caption.33}}
+{\reset@font\mltfont\mtc@string\contentsline{table}{\noexpand \leavevmode \numberline {4.6}{\ignorespaces Performance of \textsc {InfraSecure}\ v0.1.0.\relax }}{\reset@font\mltfont 36}{table.caption.34}}
+{\reset@font\mltfont\mtc@string\contentsline{table}{\noexpand \leavevmode \numberline {4.7}{\ignorespaces \textsc {InfraSecure}\ rules to detect security smells.\relax }}{\reset@font\mltfont 37}{table.caption.35}}
+{\reset@font\mltfont\mtc@string\contentsline{table}{\noexpand \leavevmode \numberline {4.8}{\ignorespaces Performance of \textsc {InfraSecure}{} (v1.1.0). (Validation with Practitioners)\relax }}{\reset@font\mltfont 40}{table.caption.37}}
+{\reset@font\mltfont\mtc@string\contentsline{table}{\noexpand \leavevmode \numberline {4.9}{\ignorespaces Precision obtained in different cycles of feedback collection for \textsc {InfraSecure}{}.\relax }}{\reset@font\mltfont 40}{table.caption.38}}

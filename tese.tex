@@ -1,0 +1,245 @@
+\documentclass[defaultstyle,10pt,master,Helvetica]{01.thesis}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{framed}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{footnote}
+\usepackage{xfrac}
+\usepackage{balance}
+\usepackage{array}
+\usepackage{changepage}
+\usepackage{listings}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[inline]{enumitem}
+\usepackage{xcolor}
+\usepackage{color, colortbl}
+\usepackage{multicol} 
+\usepackage{CJKutf8}
+
+
+
+\definecolor{main}{HTML}{5989cf}    % setting main color to be used
+\definecolor{sub}{HTML}{cde4ff}     % setting sub color to be used
+
+                    % setting global options for tcolorbox
+
+\definecolor{Gray}{gray}{0.9}
+\usepackage{soul}
+
+\sethlcolor{yellow}
+
+\input{macros}
+
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{lightgreen}{rgb}{0.6,0.9,0.6}
+\definecolor{lightyellow}{rgb}{0.9,0.9,0.6}
+\definecolor{lightorange}{rgb}{0.9,0.8,0.6}
+\definecolor{lightred}{rgb}{0.9,0.7,0.7}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{lightgray}{rgb}{0.8,0.8,0.8}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\usepackage{pifont}
+\newcommand{\lstbg}[3][0pt]{{\fboxsep#1\colorbox{#2}{\strut #3}}}
+
+\lstdefinestyle{CStyle} {
+    language=C,
+    backgroundcolor=\color{white},   % choose the background color
+    basicstyle=\ttfamily\scriptsize,        % size of fonts used for the code
+    breaklines=true,                 % automatic line breaking only at whitespace
+    captionpos=b,                    % sets the caption-position to bottom
+    commentstyle=\color{mygray}\bfseries,    % comment style
+    escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+    keywordstyle=\color{blue},       % keyword style
+    stringstyle=\color{mymauve},     % string literal style
+    frame=single,
+    numbers=left,
+    stepnumber=1,
+    xleftmargin=2em,
+    escapeinside={/*!}{!*/},
+    moredelim=**[l][\color{mygreen}]{+\ },
+    moredelim=*[l][\color{red}]{-\ }
+}
+
+\lstdefinestyle{JavaStyle} {
+    language=Java,
+    backgroundcolor=\color{white},   % choose the background color
+    basicstyle=\ttfamily\scriptsize,        % size of fonts used for the code
+    breaklines=true,                 % automatic line breaking only at whitespace
+    captionpos=b,                    % sets the caption-position to bottom
+    commentstyle=\color{mygray}\bfseries,    % comment style
+    escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+    keywordstyle=\color{blue},       % keyword style
+    stringstyle=\color{mymauve},     % string literal style
+    frame=single,
+    numbers=left,
+    stepnumber=1,
+    xleftmargin=2em,
+    escapeinside={/*!}{!*/},
+    moredelim=**[l][\color{mygreen}]{+\ },
+    moredelim=*[l][\color{red}]{-\ }
+}
+
+\lstdefinestyle{PHPStyle} {
+    language=PHP,
+    alsolanguage=HTML,
+    backgroundcolor=\color{white},   % choose the background color
+    basicstyle=\ttfamily\scriptsize,        % size of fonts used for the code
+    breaklines=true,                 % automatic line breaking only at whitespace
+    captionpos=b,                    % sets the caption-position to bottom
+    commentstyle=\color{mygray}\bfseries,    % comment style
+    escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+    keywordstyle=\color{blue},       % keyword style
+    stringstyle=\color{mymauve},     % string literal style
+    frame=single,
+	numbers=left,
+    stepnumber=1,
+	xleftmargin=2em,
+    escapeinside={/*!}{!*/},
+    moredelim=**[l][\color{mygreen}]{+\ },
+    moredelim=*[l][\color{red}]{-\ }
+}
+
+\newcounter{lstannotation}
+\setcounter{lstannotation}{0}
+\renewcommand{\thelstannotation}{\ding{\number\numexpr181+\arabic{lstannotation}}}
+\newcommand{\annotation}[1]{\refstepcounter{lstannotation}\label{#1}\thelstannotation}
+
+\newboolean{showcomments}
+\setboolean{showcomments}{true}
+%\setboolean{showcomments}{false}
+
+\ifthenelse{\boolean{showcomments}}
+  {\newcommand{\nb}[3]{
+  {\color{#2}\small\fbox{\bfseries\sffamily\scriptsize#1}}
+  {\color{#2}\sffamily\small$\triangleright~$\textit{\small #3}$~\triangleleft$}
+  }
+  }
+  {\newcommand{\nb}[3]{}
+  }
+
+\newcommand\Sofia[1]{\nb{Sofia}{red}{#1}}
+\newcommand\Luis[1]{\nb{Luis}{mygreen}{#1}}
+\newcommand\Rui[1]{\nb{Rui}{blue}{#1}}
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+%% Packages
+\input{00.Definitions/packages.tex}
+%% Page formatting
+\input{00.Definitions/pagesetup.tex}
+
+
+%-----------------------------------------------------------
+%-----------------------------------------------------------
+\begin{document}
+%% Use Main document Language
+\selectlanguage{english}
+%-- ! --> Usar 'portuguese' para versão portuguesa 
+%% ------
+\pagestyle{begin}
+
+%% ----------- COVER --------------
+% After deciding the language in which you'll write the thesis -- PT (Portuguese) or EN (English) -- you can
+% edit and select (uncomment) the respective cover file.
+%%%---------DRAFT
+\input{0.Inicio/1.cover_EN_draft.tex} 
+%\input{0.Inicio/1.cover_PT_draft.tex}
+%%%----------FINAL --- uncomment all code bellow and comment code above.
+%\input{0.Inicio/1.cover_EN_final.tex} 
+%%\input{0.Inicio/1.cover_PT_final.tex} 
+%\clearpage
+%\thispagestyle{empty}
+%\cleardoublepage
+%\input{0.Inicio/1.1stpage_EN_final.tex} 
+%%\input{0.Inicio/1.1stpage_PT_final.tex} 
+%%\clearpage
+
+
+%%-------------------------------------
+\clearpage
+% Since I am using double sided pages, the second page should be white.
+% Remember that when delivering the dissertation, IST requires for the cover to appear twice.
+
+\thispagestyle{empty}
+\cleardoublepage
+
+\setcounter{page}{1} \pagenumbering{roman} % --- Start with Roman numbering ---
+
+\baselineskip 18pt % line spacing: -12pt for single spacing
+                   %               -18pt for 1 1/2 spacing
+                   %               -24pt for double spacingnts}
+                   
+ %%%% Initial Chapters
+ \selectlanguage{english}
+\input{0.Inicio/4.Abstract.tex}
+\input{0.Inicio/5.Keywords.tex}
+\selectlanguage{portuguese}
+\input{0.Inicio/4.Resumo.tex}
+\input{0.Inicio/5.PalavrasChave.tex}
+\input{0.Inicio/3.Acknowledgments.tex}
+\input{0.Inicio/2.citation.tex} % --- Citation (optional) ---
+%% Use Main document Language
+\selectlanguage{english}
+%-- ! --> Usar 'portuguese' para versão portuguesa.
+%% ------
+\input{0.Inicio/6.Tables.tex}
+%\acresetall
+%% Remain list of table titles are set manualy
+\input{0.Inicio/7.Acronym.tex}
+%\input{0.Inicio/8.symbols.tex} %changed to glossaries
+\input{0.Inicio/8.Notation.tex}
+%% Use Main document Language
+\selectlanguage{english}
+%-- ! --> Usar 'portuguese' para versão portuguesa.
+%% Define the title of Chapter Table of Contents
+\mtcsettitle{minitoc}{Contents}
+%% ------
+\pagestyle{documentsimple}%Simple head
+\input{1.Introduction/main.tex}
+\input{2.SOTA/main.tex}
+\input{3.DATA/main.tex}
+\input{4.IAC/main.tex}
+\input{5.ALERTSPRIOR/main.tex}
+\input{6.RISKPATCHMA/main.tex}
+\input{7.Conclusions/conclusions.tex}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+%% Use with Cite and Natbib
+%% check styles in https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+\bibliographystyle{IEEEtranN}
+%\bibliographystyle{IEEEtran}
+\bibliography{02.biblio}
+%% Use with Biblatex (.bib file is set in Packages) (Not working)
+%\printbibliography
+
+\cleardoublepage
+
+\begin{appendices}
+	\begin{appendix}
+		\pagenumbering{bychapter}
+		\input{Appendices/appendixA.tex}     
+		\cleardoublepage
+	\end{appendix}
+\end{appendices}
+
+
+\end{document}
